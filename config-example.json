@@ -1,0 +1,8 @@
+{
+	"address": ":3334",
+	"plugins": {
+		"plugin-example.fs.local": {
+			"public": "/var/www/plugin-example-1"
+		}
+	}
+}
