@@ -86,7 +86,7 @@ func main() {
 			log.Fatalf("Plugin %s failed to load: %v", id, err)
 		}
 
-		if handler, ok := instance.(http.Handler); ok && reg.Type == "plugin-example.fileserver" {
+		if handler, ok := instance.(http.Handler); ok && reg.Type == "plugin-example.http" {
 			http.Handle("/", handler)
 		}
 	}

@@ -11,8 +11,8 @@ import (
 
 func init() {
 	registry.Register(&plugin.Registration{
-		Type: "plugin-example.fileserver",
-		ID:   "public",
+		Type: "plugin-example.http",
+		ID:   "fileserver",
 		Requires: []plugin.Type{
 			"plugin-example.fs",
 		},
