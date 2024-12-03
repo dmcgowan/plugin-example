@@ -78,9 +78,8 @@ func main() {
 		// Adds to the initialized set so future plugins can use
 		initialized.Add(p)
 
-		// Instance could be retrieved here to handle plugin errors
-		// immediately or build a list of a specific type of plugin,
-		// for example, all plugins which register a GRPC service.
+		// Get the instance and check for error, any init error
+		// will be returned when retrieving the instance.
 		instance, err := p.Instance()
 		if err != nil {
 			log.Fatalf("Plugin %s failed to load: %v", id, err)
